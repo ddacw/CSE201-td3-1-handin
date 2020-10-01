@@ -16,7 +16,7 @@ double *extend_array(double *array, int length, int new_size) {
   for (int i = 0; i < length; ++i) {
     new_array[i] = array[i];
   }
-  delete array;
+  delete[] array;
   return new_array;
 }
 
@@ -25,7 +25,7 @@ double *shrink_array(double *array, int length, int new_size) {
   for (int i = 0; i < new_size; ++i) {
     new_array[i] = array[i];
   }
-  delete array;
+  delete[] array;
   return new_array;
 }
 
